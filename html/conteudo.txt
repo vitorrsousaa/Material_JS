@@ -1,0 +1,79 @@
+Conteúdos estáticos:
+- São os conteudos que não realizam alterações, e são fixos
+
+Conteúdos dinamicos:
+- Um código que gera o html, e envia para o browser, realizando alterações na página sempre que for necessário
+
+Servidor DNS:
+- Traduz os nomes de domínio em um endereço de IP
+
+HTTPSeguro
+- Dados criptografados usando protocolos TLS ou SSL
+- Protege contra interceptação
+- usa certificados digitais
+
+WEB SERVICE
+- Serviços da WEB
+- É um serviço que roda atraves de requisições da WEB
+- O postman serve para testar os web services que criamos, fazendo diversas requisições
+- POST - Novo cliente
+- GET - Obter todos os clientes
+- PUT - Atualizar o cliente 
+- DELETE - Excluir o cliente
+
+FUNÇÕES DO HTML
+PreventDefault - Prevenir que a navegação ocorra
+Document.querySelectorAll - Retorna todos os links que foram criados
+.onclick - Retorna uma função quando o usuário clicar no link
+.getElementById() - Retorna um elemento pelo Id
+fetch - Baseado em promise para realizar uma requisição Ajax
+href - É o link que nós determinamos no inicio do código
+Somente após o then, que nós temos acesso ao conteúdo obtido pelo método fetch(Requisição Ajax)
+
+TAG texto
+<strong> - Deixa algum texto mais 'forte'
+<em> - Enfase em um texto
+<h> - Cabeçalho da página
+<p> - texto
+<br> - Quebra de texto
+<b> - Negrito
+<i> - Italico
+<sup> - Sobrescrito
+<sub> - Subscrito
+<hr /> - Quebra Temática
+<blockquote> - Citação longa
+<q> - Citação curtas
+<abbr> - Abreviação
+<dfn> - Definição
+
+TAGs
+<ol> - Lista Ordenada
+<ul> - Lista não ordenada
+section - Agrupamento temático de conteúdo
+article - conteúdo auto-contido
+header - Cabeçalho do documento
+footer - Rodapé do documento
+nav - Agrupa os links de navegação
+aside - de lado (sidebar)
+details - Exibe detalhes que podem ser exibidos ou escondidos
+div - divisão ou seção
+span - Usando para agrupar elemento inline
+
+
+FUNÇÕES
+.nextElementSibling - próximo elemento
+
+TABELA
+<thead> - Define o cabeçalho da TABELA
+<table> - Cria a TABELA
+<caption> - Titulo da tabela
+propriedade border = cria uma borda na tabela
+<tr> - cria uma linha
+<th> - Cria uma coluna
+propriedade colspan - Define uma quantidade de espaços na horizontal que o conteudo vai assumir
+propriedade rowspan - Define a quantidade de espaços na vertical que o conteudo vai assumir
+
+IMAGENS
+- Uma imagem PNG permite transparencia
+innerWidth - Tamanho da tela Atual
+clientWidht - Tamanho da largura do cliente

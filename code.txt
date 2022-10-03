@@ -1,0 +1,123 @@
+*React:*
+ReactDOM.render:
+- Recebe como parametro um elemento  JSX, e um container HTML;
+
+React.Fragment (<> </>):
+- Permite retornar dois elementos HTML adjacentes;
+
+React.createContext( ):
+- Permite criar um contexto;
+- Passamos como parametro o valor default para aquele contexto;
+
+Context.Provider( value={}):
+- O provider ficar por volta dos elementos que vão utilizar aquele contexto;
+- Deve receber a propriedade value, que vai conter todos os valores atualizados que queremos permitir que os elementos possam utilizar do contexto;
+
+useContext():
+- Passamos como parametro o nome do nosso contexto;
+- Atribui o valor do contexto para uma variável existente, possibilitando utilizar o que foi passado no contexto;
+
+Acrescentar um valor em um estado do React:
+- Para acrescentar um valor em um estado que já possui valores, precisamos pegar os valores antigos, acrescentar novamente, e acrescentar o novo;
+setTransactions([
+  ...transactions,
+  transaction,
+])
+- Estamos acrescentando uma transaction, junto com a lista de transactions existente
+
+*NEXT*
+Criando rotas de api:
+- Para criar as rotas de api, criamos uma pasta chamada api dentro de pages, e vamos importar por padrão NextApiRequest e NextApiResponse. Criamos uma função aqui dentro que recebe response e request como parametro, e o return da function vai ser response.json('o que eu quero retornar')
+
+Criando rotas dinamicas:
+- Para criar as rotas dinamicas, vamos criar uma pasta com o que eu quero retornar, e o arquivo dentro desta página vai possuir ['parametro']index.tsx. E para acessar este parametro, vamos utilizar o request.query;
+- Exemplo: api>users>[id]index.tsx
+
+Renderização e localStorage
+- O NextJs roda a página do lado do server, antes de encaminhar para o client. Quando estamos utilizando o localStorage, a aplicação vai quebrar, pois o localStorage é acessado do lado do cliente, e não do server.
+
+
+
+*JavaScript:*
+TimeStamp:
+- Um número que representa a data e hora atual no modelo unix
+- Math.floor(Date.now()/1000)
+
+*TypeScript:*
+Interface:
+- Define elements properties;
+
+Type ReactNode:
+- Tipo exportado do react que aceita qualquer componente HTML;
+
+Omit< 'Tipo já criado', 'parametro' | 'parametro'>:
+- A function Omit repete um tipo criado para a criação de uma tipagem nova, e recebe como parametro os categorias que queremos omitir da tipagem pai;
+
+*CSS*
+Placeholder:
+- Inform the text that will appear in the box;
+
+Align itens in the center of a display:flex :
+Use this properties:
+- Align-items: center;
+
+*GIT*
+git push origin --delete nomedabranch:
+- Delete a remote branch;
+
+git init:
+- Start git in the terminal;
+
+git add .
+- Commit the file you staged in to your local repository;
+
+git commit -m "text"
+- Commit the files;
+
+git branch nomedabranch':
+- Cria uma nova branch;
+
+git checkout 'nomedabranch':
+- Acessa outra branch criada;
+
+git branch:
+- Exibe todas as branch criadas;
+
+git log:
+- Exibe todos os commit's realizados;
+
+git merge 'nomedabranchMergeada':
+- Realiza um merge da branch digitada, para a branch que estamos trabalhando;
+- Caso estamos trabalhando na dev, e quero fazer o merge para a master. Primeiro acessamos o master no git, e depois usamos o comando passando a branch dev como parametro;
+
+git branch -D nome da branch:
+- Delete a local branch;
+
+git clone 'urlDoRepositório:
+- Cria um clone local do repositório;
+
+git remote -v:
+- Exibe os repositórios remotos criados;
+
+git remote add origin https://github.com/vitorrsousaa/ClothingStore.git:
+- Cria um repositório remoto denominado origin, que encaminha para a url descrita;
+
+git push -u origin main
+- Envia os arquivos contidos no commit para o repositório remoto denomiado origin, para dentro da branch main
+
+git pull 'branch1' 'branch2':
+- Verifica as alterações que foram feitas na branch1, e faz o download mesclando com a branch2;
+
+*TERMINAL*
+cd ..
+- Returning one past
+
+mkdir:
+- Cria uma pasta
+
+*LIFE*
+CMS
+- Painel de administração para cadastrar as aplicações e servir os dados para a aplicação. Ex: WordPress;
+
+APLICAÇÕES SERVELESS
+- Cada rota da aplicação é rodada de forma isolada. Uma máquina virtual é criar para rodar uma rota da aplicação, e depois é encerrada;

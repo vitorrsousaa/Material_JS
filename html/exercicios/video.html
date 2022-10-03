@@ -1,0 +1,96 @@
+<video id="meuVideo" width="800" height="400" controls autoplay controlsList="nodownload">
+    <source src="../video/video.mp4" type="video/mp4">
+</video>
+
+<div>
+    <button wm-play="meuVideo" onclick="playVideo()">Play</button>
+    <button wm-pause="meuVideo" onclick="pauseVideo()">Pause</button>
+    <button wm-stop="meuVideo" onclick="stopVideo()">Stop</button>
+    <button wm-increase="meuVideo" onclick="increaseVideo()">+</button>
+    <button wm-decrease="meuVideo" onclick="decreaseVideo()">-</button>
+    <button wm-back="meuVideo" onclick="backVideo()">&#60;&#60; 15 </button>
+    <button wm-advance="meuVideo" onclick="advanceVideo()"> &#62;&#62; 15 </button>
+    
+</div>
+
+<div wm-progresso="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+
+<script>
+    // Declare a variable
+    
+    const myVideo = document.getElementById('meuVideo')
+    let progresso = myVideo.currentTime
+    myVideo.oncontextmenu = () => false
+
+    /* OUTRAS MANEIRA DE CRIAR AS FUNÇÕES PARA OS BOTÕES
+    
+    document.querySelector(`[wm-play=${id}`]).onclick = e => video.play()
+    document.querySelector(`[wm-pause=${id}`]).onclick = e => video.pause()
+    
+    */
+
+    setInterval(() => {
+        const percentual = (myVideo.currentTime / myVideo.duration) * 100
+        const valorDiv = document.querySelector(`[wm-progresso] > div`)
+        // preciso pegar a div de dentro pois foi ela que colocamos o style css
+        valorDiv.style.width = `${percentual}%`
+        valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+        
+    }, 500);
+    function playVideo() {
+        myVideo.play()
+    }
+
+    function pauseVideo() {
+        myVideo.pause()
+    }
+
+    function stopVideo() {
+        myVideo.pause()
+        myVideo.currentTime = 0
+    }
+
+    function decreaseVideo(){
+        myVideo.playbackRate -= 0.10
+    }
+
+    function increaseVideo() {
+        myVideo.playbackRate += 0.10
+    }
+
+    function advanceVideo () {
+        myVideo.currentTime += 15
+    }
+    
+    function backVideo() {
+        myVideo.currentTime -= 15
+    }
+
+
+
+</script>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso > div {
+        background-color: red ;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+
+    video {
+        margin: 10px
+    }
+</style>

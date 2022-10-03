@@ -1,0 +1,1 @@
+// criamos o artquivo package.json utilizando o código npm init no terminal dentro da pasta onde vamos salvar
